@@ -418,7 +418,7 @@
 				DEVELOPMENT_TEAM = U8334BA8JN;
 				INFOPLIST_FILE = Dice/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sinamin.Dice.Dice;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sinamin.Dice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -431,7 +431,7 @@
 				DEVELOPMENT_TEAM = U8334BA8JN;
 				INFOPLIST_FILE = Dice/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sinamin.Dice.Dice;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sinamin.Dice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
