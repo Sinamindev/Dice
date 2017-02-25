@@ -78,6 +78,7 @@ class ViewController: UIViewController, UITextFieldDelegate,
         imagePickerController.delegate = self
         present(imagePickerController, animated: true, completion: nil)
     }
+    
     @IBAction func setDefaultLabelText(_ sender: UIButton) {
         diceBoxNameLabel.text = "Dice Box Name"
     }
