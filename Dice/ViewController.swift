@@ -42,6 +42,7 @@ class ViewController: UIViewController, UITextFieldDelegate,
     }
     
     //MARK: UIImageControllerDelegate
+    
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         // Dismiss the picker if the user canceled
         dismiss(animated: true, completion: nil)
