@@ -18,7 +18,7 @@ import UIKit
     }
     }
     
-    @IBInspectable var starCount: Int = 5 {
+    @IBInspectable var starCount: Int = 6 {
         didSet {
             setupButtons()
     }
@@ -26,7 +26,11 @@ import UIKit
 
 
     
-    var rating = 0
+    var rating = 0 {
+        didSet {
+            updateButtonSelectionStates()
+            }
+    }
     
     //MARK: Initialization
     
@@ -43,7 +47,20 @@ import UIKit
     //MARK: Button Action
     
     func ratingButtonTapped(button: UIButton) {
-        print("Button pressed")
+        guard let index = ratingButtons.index(of: button) else {
+            fatalError("The button, \(button), is not in the ratingButtons array: \(ratingButtons)")
+        }
+        
+        // Calculate the rating of the selected button
+        let selectedRating = index + 1
+        
+        if selectedRating == rating {
+            // If the selected star represents the current rating, reset the rating to 0.
+            rating = 0
+        } else {
+            // Otherwise set the rating to the selected star
+            rating = selectedRating
+        }
     }
     
     //MARK: Private Methods
@@ -58,10 +75,25 @@ import UIKit
         
         ratingButtons.removeAll()
         
+        // Load Button Images
+        let bundle = Bundle(for: type(of: self))
+        let Six1 = UIImage(named:"Six1", in: bundle, compatibleWith: self.traitCollection)
+        let Six2 = UIImage(named:"Six2", in: bundle, compatibleWith: self.traitCollection)
+        let Six3 = UIImage(named:"Six3", in: bundle, compatibleWith: self.traitCollection)
+        //let Six4 = UIImage(named:"Six4", in: bundle, compatibleWith: self.traitCollection)
+        //let Six5 = UIImage(named:"Six5", in: bundle, compatibleWith: self.traitCollection)
+        //let Six6 = UIImage(named:"Six6", in: bundle, compatibleWith: self.traitCollection)
+        
+        
         for _ in 0..<starCount {
             // Create button
             let button = UIButton()
-            button.backgroundColor = UIColor.red
+            
+            // Set the button images
+            button.setImage(Six1, for: .normal)
+            button.setImage(Six2, for: .selected)
+            button.setImage(Six3, for: .highlighted)
+            button.setImage(Six3, for: [.highlighted, .selected])
             
             // Add Constraints
             button.translatesAutoresizingMaskIntoConstraints = false
@@ -77,8 +109,15 @@ import UIKit
             // Add the new button to the rating button array
             ratingButtons.append(button)
         }
+        updateButtonSelectionStates()
     }
 
-
+    // Updates the selection state of the buttons
+    private func updateButtonSelectionStates() {
+        for (index, button) in ratingButtons.enumerated() {
+            // If the index of a button is less than the rating, that button should be selected.
+            button.isSelected = index < rating
+        }
+    }
 
 }
