@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		273B0A501E63F1CE008CA60C /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273B0A4F1E63F1CE008CA60C /* RatingControl.swift */; };
 		274863E01E5E47F700E61B48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274863DF1E5E47F700E61B48 /* AppDelegate.swift */; };
 		274863E21E5E47F700E61B48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274863E11E5E47F700E61B48 /* ViewController.swift */; };
 		274863E51E5E47F700E61B48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 274863E31E5E47F700E61B48 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		273B0A4F1E63F1CE008CA60C /* RatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		274863DC1E5E47F700E61B48 /* Dice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		274863DF1E5E47F700E61B48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		274863E11E5E47F700E61B48 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			children = (
 				274863DF1E5E47F700E61B48 /* AppDelegate.swift */,
 				274863E11E5E47F700E61B48 /* ViewController.swift */,
+				273B0A4F1E63F1CE008CA60C /* RatingControl.swift */,
 				274863E31E5E47F700E61B48 /* Main.storyboard */,
 				274863E61E5E47F700E61B48 /* Assets.xcassets */,
 				274863E81E5E47F700E61B48 /* LaunchScreen.storyboard */,
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				274863E21E5E47F700E61B48 /* ViewController.swift in Sources */,
+				273B0A501E63F1CE008CA60C /* RatingControl.swift in Sources */,
 				274863E01E5E47F700E61B48 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -514,6 +518,7 @@
 				274864061E5E47F700E61B48 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		274864071E5E47F700E61B48 /* Build configuration list for PBXNativeTarget "DiceTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +527,7 @@
 				274864091E5E47F700E61B48 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2748640A1E5E47F700E61B48 /* Build configuration list for PBXNativeTarget "DiceUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +536,7 @@
 				2748640C1E5E47F700E61B48 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
