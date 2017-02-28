@@ -77,23 +77,24 @@ import UIKit
         
         // Load Button Images
         let bundle = Bundle(for: type(of: self))
-        let Six1 = UIImage(named:"Six1", in: bundle, compatibleWith: self.traitCollection)
-        let Six2 = UIImage(named:"Six2", in: bundle, compatibleWith: self.traitCollection)
-        let Six3 = UIImage(named:"Six3", in: bundle, compatibleWith: self.traitCollection)
+        let Six0 = UIImage(named:"Six0", in: bundle, compatibleWith: self.traitCollection)
+        //let Six1 = UIImage(named:"Six1", in: bundle, compatibleWith: self.traitCollection)
+        //let Six2 = UIImage(named:"Six2", in: bundle, compatibleWith: self.traitCollection)
+        //let Six3 = UIImage(named:"Six3", in: bundle, compatibleWith: self.traitCollection)
         //let Six4 = UIImage(named:"Six4", in: bundle, compatibleWith: self.traitCollection)
         //let Six5 = UIImage(named:"Six5", in: bundle, compatibleWith: self.traitCollection)
         //let Six6 = UIImage(named:"Six6", in: bundle, compatibleWith: self.traitCollection)
+
         
-        
-        for _ in 0..<starCount {
+        for i in 0..<starCount {
             // Create button
             let button = UIButton()
             
             // Set the button images
-            button.setImage(Six1, for: .normal)
-            button.setImage(Six2, for: .selected)
-            button.setImage(Six3, for: .highlighted)
-            button.setImage(Six3, for: [.highlighted, .selected])
+            button.setImage(Six0, for: .normal)
+            button.setImage(UIImage(named:"Six\(i+1)"), for: .selected)
+            button.setImage(UIImage(named:"Six\(i+1)"), for: .highlighted)
+            button.setImage(UIImage(named:"Six\(i+1)"), for: [.highlighted, .selected])
             
             // Add Constraints
             button.translatesAutoresizingMaskIntoConstraints = false
@@ -108,6 +109,7 @@ import UIKit
             
             // Add the new button to the rating button array
             ratingButtons.append(button)
+        
         }
         updateButtonSelectionStates()
     }
