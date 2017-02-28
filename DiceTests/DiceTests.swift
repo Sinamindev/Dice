@@ -10,27 +10,31 @@ import XCTest
 @testable import Dice
 
 class DiceTests: XCTestCase {
+    //MARK: Dice Class Tests
     
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    // Confirm that the Die initializer returns a Die object when passed valid parameters.
+    func testDieInitializationSucceeds() {
+        // Zero rating
+        let zeroRatingDie = Die.init(name: "Zero", photo: nil, rating: 0)
+        XCTAssertNotNil(zeroRatingDie)
+        
+        // Highest positive rating
+        let positiveRatingDie = Die.init(name: "Positive", photo: nil, rating: 6)
+        XCTAssertNotNil(positiveRatingDie)
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+    // Confirm that the Die initialier returns nil when passed a negative rating or an empty name.
+    func testDieInitializationFails() {
+        // Negative rating
+        let negativeRatingDie = Die.init(name: "Negative", photo: nil, rating: -1)
+        XCTAssertNil(negativeRatingDie)
+        
+        // Rating exceeds maximum
+        let largeRatingDie = Die.init(name: "Large", photo: nil, rating: 7)
+        XCTAssertNil(largeRatingDie)
+        
+        // Empty String
+        let emptyStringDie = Die.init(name: "", photo: nil, rating: 0)
+        XCTAssertNil(emptyStringDie)
     }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
 }
