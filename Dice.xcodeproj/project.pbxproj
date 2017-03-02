@@ -16,6 +16,7 @@
 		274863F51E5E47F700E61B48 /* DiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274863F41E5E47F700E61B48 /* DiceTests.swift */; };
 		274864001E5E47F700E61B48 /* DiceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274863FF1E5E47F700E61B48 /* DiceUITests.swift */; };
 		2753D7FC1E6573C100EADCE1 /* DieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2753D7FB1E6573C100EADCE1 /* DieTableViewCell.swift */; };
+		2753D7FE1E67E50200EADCE1 /* DieTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2753D7FD1E67E50200EADCE1 /* DieTableViewController.swift */; };
 		275E572C1E6529EB002EEE10 /* Die.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275E572B1E6529EA002EEE10 /* Die.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		274863FF1E5E47F700E61B48 /* DiceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceUITests.swift; sourceTree = "<group>"; };
 		274864011E5E47F700E61B48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2753D7FB1E6573C100EADCE1 /* DieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DieTableViewCell.swift; sourceTree = "<group>"; };
+		2753D7FD1E67E50200EADCE1 /* DieTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DieTableViewController.swift; sourceTree = "<group>"; };
 		275E572B1E6529EA002EEE10 /* Die.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Die.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,6 +110,7 @@
 				273B0A4F1E63F1CE008CA60C /* RatingControl.swift */,
 				275E572B1E6529EA002EEE10 /* Die.swift */,
 				2753D7FB1E6573C100EADCE1 /* DieTableViewCell.swift */,
+				2753D7FD1E67E50200EADCE1 /* DieTableViewController.swift */,
 				274863E31E5E47F700E61B48 /* Main.storyboard */,
 				274863E61E5E47F700E61B48 /* Assets.xcassets */,
 				274863E81E5E47F700E61B48 /* LaunchScreen.storyboard */,
@@ -271,6 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2753D7FE1E67E50200EADCE1 /* DieTableViewController.swift in Sources */,
 				2753D7FC1E6573C100EADCE1 /* DieTableViewCell.swift in Sources */,
 				274863E21E5E47F700E61B48 /* ViewController.swift in Sources */,
 				273B0A501E63F1CE008CA60C /* RatingControl.swift in Sources */,

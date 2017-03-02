@@ -9,7 +9,15 @@
 import UIKit
 
 class DieTableViewCell: UITableViewCell {
+    
+    //MARK: Properties
 
+    @IBOutlet weak var dieLabel: UILabel!
+    @IBOutlet weak var photoImageView: UIImageView!
+    @IBOutlet weak var ratingControl: RatingControl!
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
