@@ -9,15 +9,16 @@
 import UIKit
 
 class DieTableViewController: UITableViewController {
+    
+    //MARK: Properties
+    
+    var dice = [Die]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        // Load the sample data.
+        loadSampleDie()
     }
 
     override func didReceiveMemoryWarning() {
@@ -92,4 +93,28 @@ class DieTableViewController: UITableViewController {
     }
     */
 
+    
+    //MARK: Private Methods
+    
+    private func loadSampleDie() {
+        let photo1 = UIImage(named: "d20-colors")
+        let photo2 = UIImage(named: "TwentySided")
+        let photo3 = UIImage(named: "TwentyBlank")
+        
+        guard let die1 = Die(name: "d20-colors", photo: photo1, rating: 4) else {
+            fatalError("Unable to instantiate die")
+        }
+        
+        guard let die2 = Die(name: "TwentySided", photo: photo2, rating: 5) else {
+            fatalError("Unable to instantiate die2")
+        }
+        
+        guard let die3 = Die(name: "TwentyBlank", photo: photo3, rating: 3) else {
+            fatalError("Unable to instantiate die3")
+        }
+        
+        dice += [die1, die2, die3]
+    }
+    
+    
 }
