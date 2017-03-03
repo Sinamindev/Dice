@@ -113,6 +113,7 @@ class DieTableViewController: UITableViewController {
             fatalError("Unable to instantiate die3")
         }
         
+        //fix die dice issue
         dice += [die1, die2, die3]
     }
     
