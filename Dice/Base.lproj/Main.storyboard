@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Die Table View Controller-->
         <scene sceneID="ZrH-I3-2Fv">
             <objects>
-                <tableViewController id="Pcu-0P-JW5" sceneMemberID="viewController">
+                <tableViewController id="Pcu-0P-JW5" customClass="DieTableViewController" customModule="Dice" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="TV8-9Z-2m2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -61,10 +61,10 @@
             </objects>
             <point key="canvasLocation" x="-855.20000000000005" y="65.217391304347828"/>
         </scene>
-        <!--View Controller-->
+        <!--Dice View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Dice" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="DiceViewController" customModule="Dice" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -74,22 +74,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fc8-sa-8nK">
-                                <rect key="frame" x="16" y="20" width="343" height="438.5"/>
+                                <rect key="frame" x="16" y="20" width="343" height="410"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dice Box Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G52-zh-Pbn">
-                                        <rect key="frame" x="113" y="0.0" width="117" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Dice Box Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nbo-3h-Iw0">
-                                        <rect key="frame" x="0.0" y="28.5" width="343" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                     <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="zEE-fE-1pE">
-                                        <rect key="frame" x="11.5" y="66.5" width="320" height="320"/>
+                                        <rect key="frame" x="11.5" y="38" width="320" height="320"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="zEE-fE-1pE" secondAttribute="height" multiplier="1:1" id="XYV-4J-Vg2"/>
@@ -99,7 +93,7 @@
                                         </connections>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="IJR-q7-61h" customClass="RatingControl" customModule="Dice" customModuleProvider="target">
-                                        <rect key="frame" x="19.5" y="394.5" width="304" height="44"/>
+                                        <rect key="frame" x="19.5" y="366" width="304" height="44"/>
                                     </stackView>
                                 </subviews>
                                 <constraints>
@@ -115,7 +109,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="diceBoxNameLabel" destination="G52-zh-Pbn" id="SeE-hX-YgV"/>
                         <outlet property="nameTextField" destination="nbo-3h-Iw0" id="3eD-Cy-fTt"/>
                         <outlet property="photoImageView" destination="zEE-fE-1pE" id="Zd7-yd-Iez"/>
                         <outlet property="ratingControl" destination="IJR-q7-61h" id="LQh-fF-XZn"/>

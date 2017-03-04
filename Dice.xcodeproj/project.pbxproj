@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		273B0A501E63F1CE008CA60C /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273B0A4F1E63F1CE008CA60C /* RatingControl.swift */; };
 		274863E01E5E47F700E61B48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274863DF1E5E47F700E61B48 /* AppDelegate.swift */; };
-		274863E21E5E47F700E61B48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274863E11E5E47F700E61B48 /* ViewController.swift */; };
+		274863E21E5E47F700E61B48 /* DiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274863E11E5E47F700E61B48 /* DiceViewController.swift */; };
 		274863E51E5E47F700E61B48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 274863E31E5E47F700E61B48 /* Main.storyboard */; };
 		274863E71E5E47F700E61B48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 274863E61E5E47F700E61B48 /* Assets.xcassets */; };
 		274863EA1E5E47F700E61B48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 274863E81E5E47F700E61B48 /* LaunchScreen.storyboard */; };
@@ -41,7 +41,7 @@
 		273B0A4F1E63F1CE008CA60C /* RatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		274863DC1E5E47F700E61B48 /* Dice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		274863DF1E5E47F700E61B48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		274863E11E5E47F700E61B48 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		274863E11E5E47F700E61B48 /* DiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceViewController.swift; sourceTree = "<group>"; };
 		274863E41E5E47F700E61B48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		274863E61E5E47F700E61B48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		274863E91E5E47F700E61B48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -106,7 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				274863DF1E5E47F700E61B48 /* AppDelegate.swift */,
-				274863E11E5E47F700E61B48 /* ViewController.swift */,
+				274863E11E5E47F700E61B48 /* DiceViewController.swift */,
 				273B0A4F1E63F1CE008CA60C /* RatingControl.swift */,
 				275E572B1E6529EA002EEE10 /* Die.swift */,
 				2753D7FB1E6573C100EADCE1 /* DieTableViewCell.swift */,
@@ -276,7 +276,7 @@
 			files = (
 				2753D7FE1E67E50200EADCE1 /* DieTableViewController.swift in Sources */,
 				2753D7FC1E6573C100EADCE1 /* DieTableViewCell.swift in Sources */,
-				274863E21E5E47F700E61B48 /* ViewController.swift in Sources */,
+				274863E21E5E47F700E61B48 /* DiceViewController.swift in Sources */,
 				273B0A501E63F1CE008CA60C /* RatingControl.swift in Sources */,
 				275E572C1E6529EB002EEE10 /* Die.swift in Sources */,
 				274863E01E5E47F700E61B48 /* AppDelegate.swift in Sources */,

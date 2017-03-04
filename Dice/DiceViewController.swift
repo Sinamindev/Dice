@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  DiceViewController.swift
 //  Dice
 //
 //  Created by Sina on 2/22/17.
@@ -8,13 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate,
+class DiceViewController: UIViewController, UITextFieldDelegate,
     UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     //MARK: Properties
     
     @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var diceBoxNameLabel: UILabel!
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var ratingControl: RatingControl!
     
@@ -39,7 +38,7 @@ class ViewController: UIViewController, UITextFieldDelegate,
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        diceBoxNameLabel.text = textField.text
+
     }
     
     //MARK: UIImageControllerDelegate
