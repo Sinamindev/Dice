@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Pcu-0P-JW5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="rw4-eu-uZD">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Die Table View Controller-->
+        <!--Your Dice-->
         <scene sceneID="ZrH-I3-2Fv">
             <objects>
                 <tableViewController id="Pcu-0P-JW5" customClass="DieTableViewController" customModule="Dice" customModuleProvider="target" sceneMemberID="viewController">
@@ -56,10 +56,17 @@
                             <outlet property="delegate" destination="Pcu-0P-JW5" id="a49-HP-yT4"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Your Dice" id="rO6-rW-pCk">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="o41-Ba-Lll">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="show" id="Waj-6N-ky3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EVW-Sh-351" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-855.20000000000005" y="65.217391304347828"/>
+            <point key="canvasLocation" x="84" y="65.217391304347828"/>
         </scene>
         <!--Dice View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -121,7 +128,25 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-70" y="66"/>
+            <point key="canvasLocation" x="868" y="65.217391304347828"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Hme-eM-kgg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rw4-eu-uZD" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fBN-cQ-3ic">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Pcu-0P-JW5" kind="relationship" relationship="rootViewController" id="UiT-df-Imi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hGN-4n-8Gb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-855.20000000000005" y="65.217391304347828"/>
         </scene>
     </scenes>
     <resources>
