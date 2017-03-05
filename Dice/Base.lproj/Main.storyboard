@@ -117,7 +117,11 @@
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="New Die" id="Ahl-oP-acB">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="e1W-7L-6UQ"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="e1W-7L-6UQ">
+                            <connections>
+                                <action selector="cancel:" destination="BYZ-38-t0r" id="zoZ-Bv-0kA"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="avh-Sh-Dfz">
                             <connections>
                                 <segue destination="QKV-jy-wJo" kind="unwind" unwindAction="unwindToDieListWithSender:" id="gQV-IA-PEA"/>
