@@ -105,6 +105,20 @@ class DieTableViewController: UITableViewController {
     }
     */
 
+    //MARK: Actions
+    
+    @IBAction func unwindToDieList(sender: UIStoryboardSegue) {
+        if let sourceViewController = sender.source as? DiceViewController, let die = sourceViewController.die {
+            
+            // Add a new die.
+            let newIndexPath = IndexPath(row: dice.count, section: 0)
+            
+            dice.append(die)
+            
+            tableView.insertRows(at: [newIndexPath], with: .automatic)
+        }
+    }
+    
     
     //MARK: Private Methods
     
