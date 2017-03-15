@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import os.log
+
 
 class DieTableViewController: UITableViewController {
     
@@ -95,15 +97,38 @@ class DieTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        super.prepare(for: segue, sender: sender)
+        
+        switch(segue.identifier ?? "") {
+        case "AddItem":
+            os_log("Adding a new die.", log: OSLog.default, type: .debug)
+        case "ShowDetail":
+            guard let diceDetailViewController = segue.destination as? DiceViewController else {
+                fatalError("Unexpected destination: \(segue.destination)")
+            }
+            
+            guard let selectedDiceCell = sender as? DieTableViewCell else {
+                fatalError("Unexpected sender: \(sender)")
+            }
+            
+            guard let indexPath = tableView.indexPath(for: selectedDiceCell) else {
+                fatalError("The selected cell is not being displayed by the table")
+            }
+            
+            let selectedDice = dice[indexPath.row]
+            diceDetailViewController.die = selectedDice
+        default:
+            fatalError("Unexpected Segue Identifier; \(segue.identifier)")
+            
+        }
+
     }
-    */
+ 
 
     //MARK: Actions
     

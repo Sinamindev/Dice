@@ -31,6 +31,14 @@ class DiceViewController: UIViewController, UITextFieldDelegate,
         // Handle the text field's user input through delegate callbacks
         nameTextField.delegate = self
         
+        // Set up views if editing an existing Meal.
+        if let dice = die {
+            navigationItem.title = dice.name
+            nameTextField.text   = dice.name
+            photoImageView.image = dice.photo
+            ratingControl.rating = dice.rating
+        }
+        
         // Enable the Save button only if the text field has a valid Meal name.
         updateSaveButtonState()
     }
