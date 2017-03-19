@@ -134,13 +134,19 @@ class DieTableViewController: UITableViewController {
     
     @IBAction func unwindToDieList(sender: UIStoryboardSegue) {
         if let sourceViewController = sender.source as? DiceViewController, let die = sourceViewController.die {
-            
-            // Add a new die.
-            let newIndexPath = IndexPath(row: dice.count, section: 0)
-            
-            dice.append(die)
-            
-            tableView.insertRows(at: [newIndexPath], with: .automatic)
+            if let selectedIndexPath = tableView.indexPathForSelectedRow {
+                // Update an existing dice.
+                dice[selectedIndexPath.row] = die
+                tableView.reloadRows(at: [selectedIndexPath], with: .none)
+            }
+            else{
+                // Add a new die.
+                let newIndexPath = IndexPath(row: dice.count, section: 0)
+                
+                dice.append(die)
+                
+                tableView.insertRows(at: [newIndexPath], with: .automatic)
+            }
         }
     }
     
