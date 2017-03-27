@@ -24,6 +24,10 @@ class Die: NSObject, NSCoding {
     var photo: UIImage?
     var rating: Int
     
+    //MARK: Archiving Paths
+    
+    static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
+    static let ArchiveURL = DocumentsDirectory.appendingPathComponent("dice")
     
     //MARK: Initialization
     
@@ -60,15 +64,17 @@ class Die: NSObject, NSCoding {
         guard let name = aDecoder.decodeObject(forKey: PropertyKey.name) as? String else {
             os_log("Unable to decode the name for a Die object.", log: OSLog.default, type: .debug)
             return nil
-            
-            // Because photo is an optional property of Die, just use conditional cast.
-            let photo = aDecoder.decodeObjectForKey(PropertyKey.photo) as? UIImage
-            
-            let rating = aDecoder.decodeIntegerForKey(PropertyKey.rating)
-            
-            // Must call designated initializer.
-            self.init(name: name, photo: photo, rating: rating)
         }
+        
+        // Because photo is an optional property of Die, just use conditional cast.
+        let photo = aDecoder.decodeObject(forKey: PropertyKey.photo) as? UIImage
+        
+        let rating = aDecoder.decodeInteger(forKey: PropertyKey.rating)
+        
+        // Must call designated initializer.
+        self.init(name: name, photo: photo, rating: rating)
     }
+    
+
 
 }
