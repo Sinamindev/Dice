@@ -22,6 +22,16 @@ class DieTableViewController: UITableViewController {
         // Use the edit button item provided by the table view controller.
         navigationItem.leftBarButtonItem = editButtonItem
         
+        // Load any saved die, otherwise load sample data.
+        if let savedDie = loadDie() {
+            dice += savedDie
+        }
+        else {
+            // Load the sample data.
+            loadSampleDie()
+        }
+
+        
         // Load the sample data.
         loadSampleDie()
     }
@@ -79,6 +89,7 @@ class DieTableViewController: UITableViewController {
         if editingStyle == .delete {
             // Delete the row from the data source
             dice.remove(at: indexPath.row)
+            saveDie()
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
@@ -151,6 +162,8 @@ class DieTableViewController: UITableViewController {
                 
                 tableView.insertRows(at: [newIndexPath], with: .automatic)
             }
+            // Save the die.
+            saveDie()
         }
     }
     
@@ -178,5 +191,18 @@ class DieTableViewController: UITableViewController {
         dice += [die1, die2, die3]
     }
     
+    private func saveDie() {
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(dice, toFile: Die.ArchiveURL.path)
+        
+        if isSuccessfulSave {
+            os_log("Die successfully saved.", log: OSLog.default, type: .debug)
+        } else {
+            os_log("Failed to save dice...", log: OSLog.default, type: .error)
+        }
+    }
     
+    private func loadDie() -> [Die]? {
+        return NSKeyedUnarchiver.unarchiveObject(withFile: Die.ArchiveURL.path) as? [Dice]
+
+    }
 }
