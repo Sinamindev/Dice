@@ -202,7 +202,7 @@ class DieTableViewController: UITableViewController {
     }
     
     private func loadDie() -> [Die]? {
-        return NSKeyedUnarchiver.unarchiveObject(withFile: Die.ArchiveURL.path) as? [Dice]
+        return NSKeyedUnarchiver.unarchiveObject(withFile: Die.ArchiveURL.path) as? [Die]
 
     }
 }
