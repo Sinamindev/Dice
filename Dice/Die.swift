@@ -6,6 +6,8 @@
 //  Copyright © 2017 Sina. All rights reserved.
 //
 
+
+// need to update die/Die - dice/Dice naming scheme
 import UIKit
 import os.log
 
